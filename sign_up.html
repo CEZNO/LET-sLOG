@@ -95,20 +95,18 @@
 
               <div class="form-floating">
                 <input class="form-control" id="password" type="password" placeholder="Enter your password..."
-                  data-sb-validations="required,length"/>
+                oninput="form_check()" data-sb-validations="required,length">
                 <label for="password">Password</label>
                 <div class="invalid-feedback" data-sb-feedback="password:required">비밀번호를 입력해주세요.</div>
                 <div class="invalid-feedback" data-sb-feedback="password:length">비밀번호를 9자 이상 입력해주세요.</div>
               </div>
 
               <div class="form-floating">
-                <input class="form-control is-invalid" id="confirm_password" type="password" placeholder="Confirm your password..." data-sb-validations="required,length"/>
+                <input class="form-control is-invalid" id="confirm_password" type="password" placeholder="Confirm your password..." oninput="form_check()"/>
                 <label for="confirm_password">Confirm Password</label>
-                <div class="invalid-feedback" data-sb-feedback="confirm_password:required">비밀번호를 다시 한 번 입력해주세요.</div>
-                <div class="invalid-feedback" data-sb-feedback="confirm_password:length">비밀번호를 9자 이상 입력해주세요.</div>
                 <div class="invalid-feedback">비밀번호가 일치하지 않습니다.</div>
                 <div class="valid-feedback">비밀번호가 일치합니다.</div>
-                <button class="btn btn-secondary text-uppercase" type="button" onclick="form_check()">Confirm Password</button>
+                <!-- <button class="btn btn-secondary text-uppercase" type="button" onclick="form_check()">Confirm Password</button> -->
               </div>
 
               <br />
